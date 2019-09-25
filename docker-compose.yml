@@ -1,0 +1,22 @@
+version: '3'
+
+networks:
+  private:
+  public:
+    external:
+      name: web
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    labels:
+      - traefik.backend=phpdocker
+      - traefik.docker.network=web
+      - traefik.frontend.rule=Host:phpdocker.lokal
+      - traefik.port=80
+    networks:
+      - private
+      - public
+    volumes:
+      - .:/srv/app

@@ -1,0 +1,15 @@
+:80 {
+    tls off
+    root /srv/app/web
+    gzip
+    fastcgi / 127.0.0.1:9000 php
+    rewrite {
+        regexp .*
+        ext /
+        to /index.php?{query}
+    }
+
+    log stdout
+    errors stdout
+    on startup php-fpm7.3 --nodaemonize
+}
