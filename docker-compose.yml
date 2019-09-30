@@ -11,9 +11,9 @@ services:
       context: .
       dockerfile: docker/Dockerfile
     labels:
-      - traefik.backend=phpdocker
+      - traefik.backend=yii2vue
       - traefik.docker.network=web
-      - traefik.frontend.rule=Host:phpdocker.lokal
+      - traefik.frontend.rule=Host:yii2vue.lokal
       - traefik.port=80
     networks:
       - private

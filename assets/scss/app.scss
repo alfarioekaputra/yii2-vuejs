@@ -1,0 +1,14 @@
+// CoreUI Icons Set
+@import '~@coreui/icons/css/free.min.css';
+/* Import Font Awesome Icons Set */
+$fa-font-path: '~font-awesome/fonts/';
+@import '~font-awesome/scss/font-awesome.scss';
+
+/* Import Bootstrap Vue Styles */
+@import '~bootstrap-vue/dist/bootstrap-vue.css';
+
+// Import styles
+@import "~@coreui/coreui/scss/coreui";
+
+// import fontawesome
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
